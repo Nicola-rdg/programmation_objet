@@ -5,7 +5,7 @@ class Vector
 {
 private:
     int dimension;
-    double *vecteur;
+    double vecteur[];
     static int compteur;
 public:
      Vector(int);

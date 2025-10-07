@@ -7,13 +7,13 @@ int Vector::compteur=0;
 
 Vector :: Vector(int n){
     dimension=n;
-    vecteur=new double[dimension];
+    double vecteur[dimension];
     compteur++;
 }
 
 Vector :: Vector(const Vector&v){
     dimension=v.dimension;
-    vecteur=new double[dimension];
+    double vecteur[dimension];
     for(int i=0;i<dimension;i++){
         vecteur[i]=v.vecteur[i];
     }
