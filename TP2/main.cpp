@@ -1,5 +1,5 @@
-#include "point.h"
-#include "Vector.h"
+#include "point.cpp"
+#include "Vector.cpp"
 #include <iostream>
 using namespace std;
 
