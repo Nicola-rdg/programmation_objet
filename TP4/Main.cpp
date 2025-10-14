@@ -1,31 +1,60 @@
 #include "Date.cpp"
+#include "Heure.cpp"
 #include <iostream>
 using namespace std;
 
 int main(){
-    // Test du constructeur de base et test de l'affichage
-    Date date1;
-    date1.affiche();
+    // // Test du constructeur de base et test de l'affichage
+    // Date date1;
+    // date1.affiche();
+
+    // // Test de la non validité d'une date
+    // date1=Date(2,12,2051);
+    // date1.affiche();
+    
+    // // Test du constructeur avec une date valide
+    // date1=Date(20,06,2004);
+    // date1.affiche();
+
+    // // Test des 3 setters
+    // date1.setJour(25);
+    // date1.setMois(8);
+    // date1.setAnnee(2030);
+    // date1.affiche();
+
+    // // Test des getters
+    // cout<<date1.getJour()<<"\n";
+    // cout<<date1.getMois()<<"\n";
+    // cout<<date1.getAnnee()<<"\n";
+
+
+
+    // Test du constructeur par défaut et test de l'affichage
+    Heure heure1;
+    heure1.affiche();
 
     // Test de la non validité d'une date
-    date1=Date(2,12,2051);
-    date1.affiche();
+    heure1=Heure(25,45);
+    heure1.affiche();
     
-    // Test du constructeur avec une date valide
-    date1=Date(20,06,2004);
-    date1.affiche();
+    // Test du constructeur avec une heure valide
+    heure1=Heure(9,35);
+    heure1.affiche();
 
-    // Test des 3 setters
-    date1.setJour(25);
-    date1.setMois(8);
-    date1.setAnnee(2030);
-    date1.affiche();
+    // Test des 2 setters pour une heure et des minutes valides
+    heure1.setHeure(12);
+    heure1.setMinute(20);
+    heure1.affiche();
+
+    // Test des 2 setters pour une heure et des minutes valides
+    heure1.setHeure(30);
+    heure1.setMinute(70);
+    heure1.affiche();
 
     // Test des getters
-    cout<<date1.getJour()<<"\n";
-    cout<<date1.getMois()<<"\n";
-    cout<<date1.getAnnee()<<"\n";
-
+    cout<<heure1.getHeure()<<"\n";
+    cout<<heure1.getMinute()<<"\n";
+    
 
 
     return 0;
