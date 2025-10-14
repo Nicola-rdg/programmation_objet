@@ -1,0 +1,86 @@
+#include "RDV.h"
+#include <iostream>
+using namespace std;
+
+RDV::RDV(){
+    nb_participants=0;
+    list_participants=new string[10];
+}
+
+void RDV::affiche(){
+    cout<<"Le RDV a pour information : \n";
+    cout<<"     ";
+    date.affiche();
+    cout<<"     ";
+    heure.affiche();
+    cout<<"     Le lieu est "<<lieu<<"\n";
+    cout<<"     Il y a "<<nb_participants<<" participants\n";
+    cout<<"     Les participants sont ";
+    for(int i=0;i<nb_participants-1;i++){
+        cout<<list_participants[i]<<", ";
+    }
+    cout<<list_participants[nb_participants-1]<<"\n";
+}
+
+void RDV::saisieParticipants(){
+    cout<<"Veuillez saisir les "<<nb_participants<<" participants un par un : \n";
+    for(int i=0;i<nb_participants;i++){
+        cout<<"participants "<<i<<" : ";
+        cin>>list_participants[i];
+        cout<<"\n";
+    }
+}
+
+void RDV::saisieLieu(){
+    cout<<"Veuillez saisir le lieu du RDV : ";
+    cin>>lieu;
+    cout<<"\n";
+}
+
+void RDV::saisie(){
+    saisieLieu();
+    cout<<"Veuillez saisir le nombre de participants : ";
+    cin>>nb_participants;
+    saisieParticipants();
+    int j,m,a;
+    cout<<"Veuillez maintenant saisir la date du RDV : \n";
+    cout<<"jour = ";
+    cin>>j;
+    cout<<"mois = ";
+    cin>>m;
+    cout<<"annee = ";
+    cin>>a;
+    date=Date(j,m,a);
+
+    int h,min;
+    cout<<"Veuillez saisir l'heure du RDV : \n";
+    cout<<"heure = ";
+    cin>>h;
+    cout<<"minute = ";
+    cin>>min;
+    heure=Heure(h,min);
+}
+
+void RDV::setDate(const Date& dateRdv){
+    date=dateRdv;
+}
+
+void RDV::setHeure(const Heure& heureRdv){
+    heure=heureRdv;
+}
+
+void RDV::setLieu(const std::string& lieuRdv){
+    lieu=lieuRdv;
+}
+
+void RDV::setNombreDeParticipants(int nombreDeParticipants){
+    nb_participants=nombreDeParticipants;
+}
+
+void RDV::setParticipants(std::string* ps){
+    list_participants=ps;
+}
+
+void RDV::setParticipants(int i, std::string s){
+    list_participants[i]=s;
+}

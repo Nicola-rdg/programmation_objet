@@ -1,5 +1,6 @@
 #include "Date.cpp"
 #include "Heure.cpp"
+#include "RDV.cpp"
 #include <iostream>
 using namespace std;
 
@@ -29,32 +30,38 @@ int main(){
 
 
 
-    // Test du constructeur par défaut et test de l'affichage
-    Heure heure1;
-    heure1.affiche();
+    // // Test du constructeur par défaut et test de l'affichage
+    // Heure heure1;
+    // heure1.affiche();
 
-    // Test de la non validité d'une date
-    heure1=Heure(25,45);
-    heure1.affiche();
+    // // Test de la non validité d'une date
+    // heure1=Heure(25,45);
+    // heure1.affiche();
     
-    // Test du constructeur avec une heure valide
-    heure1=Heure(9,35);
-    heure1.affiche();
+    // // Test du constructeur avec une heure valide
+    // heure1=Heure(9,35);
+    // heure1.affiche();
 
-    // Test des 2 setters pour une heure et des minutes valides
-    heure1.setHeure(12);
-    heure1.setMinute(20);
-    heure1.affiche();
+    // // Test des 2 setters pour une heure et des minutes valides
+    // heure1.setHeure(12);
+    // heure1.setMinute(20);
+    // heure1.affiche();
 
-    // Test des 2 setters pour une heure et des minutes valides
-    heure1.setHeure(30);
-    heure1.setMinute(70);
-    heure1.affiche();
+    // // Test des 2 setters pour une heure et des minutes valides
+    // heure1.setHeure(30);
+    // heure1.setMinute(70);
+    // heure1.affiche();
 
-    // Test des getters
-    cout<<heure1.getHeure()<<"\n";
-    cout<<heure1.getMinute()<<"\n";
+    // // Test des getters
+    // cout<<heure1.getHeure()<<"\n";
+    // cout<<heure1.getMinute()<<"\n";
     
+
+
+
+    RDV rdv;
+    rdv.saisie();
+    rdv.affiche();
 
 
     return 0;
