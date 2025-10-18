@@ -25,6 +25,7 @@ public:
     void setNombreDeParticipants(int);
     void setParticipants(std::string*);
     void setParticipants(int,std::string);
+    bool estCompatibleAvec(RDV);
 };
 
 

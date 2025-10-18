@@ -15,11 +15,13 @@ void RDV::affiche(){
     heure.affiche();
     cout<<"     Le lieu est "<<lieu<<"\n";
     cout<<"     Il y a "<<nb_participants<<" participants\n";
-    cout<<"     Les participants sont ";
-    for(int i=0;i<nb_participants-1;i++){
-        cout<<list_participants[i]<<", ";
+    if(nb_participants!=0){
+        cout<<"     Les participants sont ";
+        for(int i=0;i<nb_participants-1;i++){
+            cout<<list_participants[i]<<", ";
+        }
+        cout<<list_participants[nb_participants-1]<<"\n";
     }
-    cout<<list_participants[nb_participants-1]<<"\n";
 }
 
 void RDV::saisieParticipants(){
@@ -51,6 +53,8 @@ void RDV::saisie(){
     cout<<"annee = ";
     cin>>a;
     date=Date(j,m,a);
+    if(!date.checkDate(j,m,a))
+        cout<<"Date invalide, donc la date a ete fixee au 1/1/2020\n";
 
     int h,min;
     cout<<"Veuillez saisir l'heure du RDV : \n";
@@ -59,6 +63,8 @@ void RDV::saisie(){
     cout<<"minute = ";
     cin>>min;
     heure=Heure(h,min);
+    if(!((h>=0 & h<=24)&(m>=0 & m<=60)))
+        cout<<"Heure invalide, donc l'heure a ete fixee a 0h00\n";
 }
 
 void RDV::setDate(const Date& dateRdv){
@@ -83,4 +89,10 @@ void RDV::setParticipants(std::string* ps){
 
 void RDV::setParticipants(int i, std::string s){
     list_participants[i]=s;
+}
+
+bool RDV::estCompatibleAvec(RDV r){
+    if((date.getAnnee()==r.date.getAnnee())&(date.getMois()==r.date.getMois())&((date.getJour()==r.date.getJour()))&(heure.getHeure()==r.heure.getHeure())&(heure.getMinute()==r.heure.getMinute()))
+        return false;
+    return true;
 }

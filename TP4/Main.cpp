@@ -59,9 +59,12 @@ int main(){
 
 
 
-    RDV rdv;
+    RDV rdv,rdv2;
     rdv.saisie();
     rdv.affiche();
+    cout<<rdv.estCompatibleAvec(rdv2);
+    rdv2.saisie();
+    cout<<rdv2.estCompatibleAvec(rdv);
 
 
     return 0;

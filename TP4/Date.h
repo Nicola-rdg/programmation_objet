@@ -7,7 +7,6 @@ private:
     int jour;
     int mois;
     int annee;
-    bool checkDate(int,int,int);
 
     
 public:
@@ -20,6 +19,7 @@ public:
     void setJour(int);
     void setMois(int);
     void setAnnee(int);
+    bool checkDate(int,int,int);
     
 };
 
