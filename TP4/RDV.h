@@ -26,6 +26,8 @@ public:
     void setParticipants(std::string*);
     void setParticipants(int,std::string);
     bool estCompatibleAvec(RDV);
+    bool estEgal(const RDV&);
+    bool estAvant(const RDV&);
 };
 
 

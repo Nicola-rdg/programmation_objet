@@ -13,7 +13,7 @@ public:
     ~Agenda();
 
     void ajoute(RDV);
-    void enleve();
+    void enleve(const Date&,const Heure&);
 
     void affiche();
 };

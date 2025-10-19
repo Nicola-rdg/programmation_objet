@@ -96,3 +96,13 @@ bool RDV::estCompatibleAvec(RDV r){
         return false;
     return true;
 }
+
+bool RDV::estEgal(const RDV& r){
+    return (date.estEgal(r.date) && heure.estEgal(r.heure));
+}
+
+bool RDV::estAvant(const RDV& r){
+    if(date.estAvant(r.date)) return true;
+    if(date.estEgal(r.date) && heure.estAvant(r.heure)) return true;
+    else return false;
+}

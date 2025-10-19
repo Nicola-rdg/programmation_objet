@@ -14,6 +14,8 @@ public:
     int getMinute();
     void setHeure(int);
     void setMinute(int);
+    bool estEgal(const Heure&);
+    bool estAvant(const Heure&);
 };
 
 

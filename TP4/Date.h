@@ -20,6 +20,8 @@ public:
     void setMois(int);
     void setAnnee(int);
     bool checkDate(int,int,int);
+    bool estEgal(const Date&);
+    bool estAvant(const Date&);
     
 };
 

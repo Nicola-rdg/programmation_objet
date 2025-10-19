@@ -58,3 +58,14 @@ void Date::setAnnee(int a){
     if(a>=2000 & a<=2050)
         annee=a;
 }
+
+bool Date::estEgal(const Date& d){
+    return ((jour==d.jour)&&(mois==d.mois)&&(annee==d.annee));
+}
+
+bool Date::estAvant(const Date& d){
+    if(annee<d.annee) return true;
+    if((annee==d.annee)&&(mois<d.mois)) return true;
+    if((annee==d.annee)&&(mois==d.mois)&&(jour<d.jour)) return true;
+    else return false; 
+}

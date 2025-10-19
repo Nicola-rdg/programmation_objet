@@ -70,11 +70,47 @@ int main(){
 
 
 
+    // // Création d'un agenda
+    // Agenda a;
+
+    // // Ajouts de plusieurs RDV
+    // RDV rdv1,rdv2;
+    // rdv1.setNombreDeParticipants(2);
+    // string *ps=new string[2];
+    // ps[0]="Michel";
+    // ps[1]="Albert";
+    // rdv1.setDate(Date(24,10,2025));
+    // rdv1.setHeure(Heure(13,55));
+    // rdv1.setLieu("La_rose");
+    // rdv1.setParticipants(ps);
+    // a.ajoute(rdv1);
+    // a.ajoute(rdv2);
+
+    // // Affichage de l'agenda
+    // a.affiche();
+
+    // // Enlevage d'un rdv
+    // a.enleve();
+
+    // // Affichage de l'agenda
+    // a.affiche();
+
+    // // Enlevage du dernier rdv
+    // a.enleve();
+
+    // //Affichage de l'agenda
+    // a.affiche();
+
+
+
+
+    //Exercice 2 TP5
+
     // Création d'un agenda
     Agenda a;
 
     // Ajouts de plusieurs RDV
-    RDV rdv1,rdv2;
+    RDV rdv1,rdv2,rdv3;
     rdv1.setNombreDeParticipants(2);
     string *ps=new string[2];
     ps[0]="Michel";
@@ -83,23 +119,36 @@ int main(){
     rdv1.setHeure(Heure(13,55));
     rdv1.setLieu("La_rose");
     rdv1.setParticipants(ps);
+    rdv3.setNombreDeParticipants(0);
+    rdv3.setLieu("Ici");
+    rdv3.setDate(Date(1,1,2023));
+    rdv3.setHeure(Heure(10,10));
     a.ajoute(rdv1);
     a.ajoute(rdv2);
+    a.ajoute(rdv3);
+
+    // Essaie d'ajout d'un RDV deja present dans l'agenda
+    a.ajoute(rdv1);
 
     // Affichage de l'agenda
     a.affiche();
 
-    // Enlevage d'un rdv
-    a.enleve();
+    // Essaie de suppression d'une date ne correspondant a aucun rdv
+    Date d=Date(1,1,2020);
+    Heure h=Heure(1,1);
+    a.enleve(d,h);
 
-    // Affichage de l'agenda
+    // Suppression d'un rdv avec une date valide
+    a.enleve(Date(24,10,2025),Heure(13,55));
     a.affiche();
 
-    // Enlevage du dernier rdv
-    a.enleve();
-
-    //Affichage de l'agenda
+    // Supression des derniers rdv
+    a.enleve(Date(1,1,2023),Heure(10,10));
+    a.enleve(Date(1,1,2000),Heure(0,0));
     a.affiche();
+
+    // Essaie de suppression d'un element de cet agenda vide
+    a.enleve(d,h);
 
     return 0;
 }

@@ -39,3 +39,13 @@ void Heure::setMinute(int m){
     if(m>=0 & m<=60)
         minute=m;
 }
+
+bool Heure::estEgal(const Heure& h){
+    return (heure==h.heure && minute==h.minute);
+}
+
+bool Heure::estAvant(const Heure& h){
+    if(heure<h.heure) return true;
+    if(heure==h.heure && minute<h.minute) return true;
+    else return false;
+}
