@@ -1,6 +1,8 @@
 #include "Date.cpp"
 #include "Heure.cpp"
 #include "RDV.cpp"
+#include "NoeudRDV.cpp"
+#include "Agenda.cpp"
 #include <iostream>
 using namespace std;
 
@@ -59,13 +61,45 @@ int main(){
 
 
 
-    RDV rdv,rdv2;
-    rdv.saisie();
-    rdv.affiche();
-    cout<<rdv.estCompatibleAvec(rdv2);
-    rdv2.saisie();
-    cout<<rdv2.estCompatibleAvec(rdv);
+    // RDV rdv,rdv2;
+    // rdv.saisie();
+    // rdv.affiche();
+    // cout<<rdv.estCompatibleAvec(rdv2);
+    // rdv2.saisie();
+    // cout<<rdv2.estCompatibleAvec(rdv);
 
+
+
+    // Création d'un agenda
+    Agenda a;
+
+    // Ajouts de plusieurs RDV
+    RDV rdv1,rdv2;
+    rdv1.setNombreDeParticipants(2);
+    string *ps=new string[2];
+    ps[0]="Michel";
+    ps[1]="Albert";
+    rdv1.setDate(Date(24,10,2025));
+    rdv1.setHeure(Heure(13,55));
+    rdv1.setLieu("La_rose");
+    rdv1.setParticipants(ps);
+    a.ajoute(rdv1);
+    a.ajoute(rdv2);
+
+    // Affichage de l'agenda
+    a.affiche();
+
+    // Enlevage d'un rdv
+    a.enleve();
+
+    // Affichage de l'agenda
+    a.affiche();
+
+    // Enlevage du dernier rdv
+    a.enleve();
+
+    //Affichage de l'agenda
+    a.affiche();
 
     return 0;
 }
