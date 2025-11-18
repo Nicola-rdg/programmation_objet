@@ -4,6 +4,7 @@
 #include "PersonnelAdmin.h"
 #include "EnseignantPermanent.h"
 #include "EnseignantVacataire.h"
+#include "ListePersonnel.h"
 
 int main(){
     // Personne personne1=Personne("Rodrigues","Nicola","2 rue du chien");
@@ -31,9 +32,30 @@ int main(){
     // enseigant5.affiche();
     // cout<<"\nLe salaire est de "<<enseigant5.calculSalaire();
 
-    //Exercice 6
+    // //Exercice 6
+    // Personne personne6=Personne("Nom","Prenom");
+    // EnseignantVacataire enseignant6=EnseignantVacataire(personne6,1500,"casier2",6,15.32);
+    // enseignant6.affiche();
+    // cout<<"\nLe salaire est de "<<enseignant6.calculSalaire();
+
+    //Exercice 7
+    ListePersonnel liste;
+
+    Personne personne3=Personne("Delala","Jean");
+    Personnel* personnel3=new Personnel(personne3,1500);
+    liste.ajoutPersonnel(personnel3);
+
+    Personne personne4=Personne("Delala","Michel");
+    Personnel* admin4=new PersonnelAdmin(personne4, 1600.12, 10, 15.41);
+    liste.ajoutPersonnel(admin4);
+    
+    Personne personne5=Personne("LaRose","Gustave");
+    Personnel* enseigant5=new EnseignantPermanent(personne5,1500,"La jetee",2,200);
+    liste.ajoutPersonnel(enseigant5);
+
     Personne personne6=Personne("Nom","Prenom");
-    EnseignantVacataire enseignant6=EnseignantVacataire(personne6,1500,"casier2",6,15.32);
-    enseignant6.affiche();
-    cout<<"\nLe salaire est de "<<enseignant6.calculSalaire();
+    Personnel* enseignant6=new EnseignantVacataire(personne6,1500,"casier2",6,15.32);
+    liste.ajoutPersonnel(enseignant6);
+
+    liste.afficherSalaires();
 }

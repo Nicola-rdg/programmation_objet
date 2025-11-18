@@ -1,5 +1,12 @@
 #include "Personne.h"
 
+Personne::Personne(){
+    nom="";
+    prenom="";
+    adresse="";
+    telephone="";
+}
+
 Personne::Personne(string nom, string prenom, string adresse, string telephone){
     this->nom=nom;
     this->prenom=prenom;

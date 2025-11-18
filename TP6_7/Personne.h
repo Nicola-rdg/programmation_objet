@@ -8,6 +8,7 @@ class Personne
 private:
     string nom, prenom, adresse, telephone;
 public:
+    Personne();
     Personne(string, string,string="",string="");
     Personne(const Personne&personne);
     void affiche();

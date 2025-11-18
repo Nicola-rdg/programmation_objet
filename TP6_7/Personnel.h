@@ -7,6 +7,7 @@ class Personnel:public Personne
 private:
     float salaire;
 public:
+    Personnel();
     Personnel(const Personne&personne,float);
     float calculSalaire();
     float getSalaire();
