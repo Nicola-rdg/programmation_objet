@@ -58,4 +58,6 @@ int main(){
     liste.ajoutPersonnel(enseignant6);
 
     liste.afficherSalaires();
+
+    cout<<liste.getPersonnel(1).calculSalaire(); // Ici c'est la méthode de calculSalaire de Personnel qui est utilisée
 }

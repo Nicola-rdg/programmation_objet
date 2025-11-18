@@ -5,13 +5,16 @@
 class ListePersonnel
 {
 private:
-    Personnel* tab[100];
+    Personnel** tab;
     int nb;
+    int taille;
 
 public:
-    ListePersonnel();
+    ListePersonnel(int taille=3);
+    void doubleTableau();
     void ajoutPersonnel(Personnel* ptPersonnel);
     void afficherSalaires();
+    Personnel getPersonnel(int);
 };
 
 #endif
