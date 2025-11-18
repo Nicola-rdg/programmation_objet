@@ -9,6 +9,7 @@ private:
     string nom, prenom, adresse, telephone;
 public:
     Personne(string, string,string="",string="");
+    Personne(const Personne&personne);
     void affiche();
     string getNom();
     string getPrenom();

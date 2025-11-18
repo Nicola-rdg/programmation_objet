@@ -7,6 +7,13 @@ Personne::Personne(string nom, string prenom, string adresse, string telephone){
     this->telephone=telephone;
 }
 
+Personne::Personne(const Personne&personne){
+    nom=personne.nom;
+    prenom=personne.prenom;
+    adresse=personne.adresse;
+    telephone=personne.telephone;
+}
+
 void Personne::affiche(){
     cout<<"{nom="<<nom<<", prenom="<<prenom<<", adresse="<<adresse<<", telephone="<<telephone<<"}\n";
 }
