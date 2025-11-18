@@ -35,6 +35,6 @@ void ListePersonnel::afficherSalaires(){
     cout<<"{nom : "<<tab[nb-1]->getNom()<<", salaire :"<<tab[nb-1]->calculSalaire()<<"}]\n";//ajout de l'element manquant
 }
 
-Personnel ListePersonnel::getPersonnel(int i){
-    return *tab[i];
+Personnel* ListePersonnel::getPersonnel(int i){
+    return tab[i];
 }

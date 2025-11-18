@@ -14,7 +14,7 @@ public:
     void doubleTableau();
     void ajoutPersonnel(Personnel* ptPersonnel);
     void afficherSalaires();
-    Personnel getPersonnel(int);
+    Personnel* getPersonnel(int);
 };
 
 #endif

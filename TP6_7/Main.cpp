@@ -41,10 +41,6 @@ int main(){
     //Exercice 7
     ListePersonnel liste;
 
-    Personne personne3=Personne("Delala","Jean");
-    Personnel* personnel3=new Personnel(personne3,1500);
-    liste.ajoutPersonnel(personnel3);
-
     Personne personne4=Personne("Delala","Michel");
     Personnel* admin4=new PersonnelAdmin(personne4, 1600.12, 10, 15.41);
     liste.ajoutPersonnel(admin4);
