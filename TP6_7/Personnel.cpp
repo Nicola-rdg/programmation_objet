@@ -17,7 +17,6 @@ void Personnel::setSalaire(float salaire){
 }
 
 void Personnel::affiche(){
-    cout<<"[";
     Personne::affiche();
-    cout<<", salaire="<<salaire<<"]\n";
+    cout<<", salaire="<<salaire;
 }

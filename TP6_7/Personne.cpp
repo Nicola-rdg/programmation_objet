@@ -15,7 +15,7 @@ Personne::Personne(const Personne&personne){
 }
 
 void Personne::affiche(){
-    cout<<"{nom="<<nom<<", prenom="<<prenom<<", adresse="<<adresse<<", telephone="<<telephone<<"}\n";
+    cout<<"nom="<<nom<<", prenom="<<prenom<<", adresse="<<adresse<<", telephone="<<telephone;
 }
 
 string Personne::getNom(){
