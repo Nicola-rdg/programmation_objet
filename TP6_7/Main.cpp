@@ -57,7 +57,5 @@ int main(){
     Personnel* enseignant6=new EnseignantVacataire(personne6,1500,"casier2",6,15.32);
     liste.ajoutPersonnel(enseignant6);
 
-    liste.afficherSalaires();
-
-    cout<<liste.getPersonnel(1).calculSalaire(); // Ici c'est la méthode de calculSalaire de Personnel qui est utilisée
+    liste.afficherSalaires(); //Ici le salaire de chaque personne du personnel correspond bien
 }

@@ -9,7 +9,7 @@ private:
 public:
     Personnel();
     Personnel(const Personne&personne,float);
-    float calculSalaire();
+    virtual float calculSalaire();
     float getSalaire();
     void setSalaire(float);
     void affiche();
