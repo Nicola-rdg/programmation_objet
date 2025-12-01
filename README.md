@@ -13,8 +13,10 @@ Each folder corresponds to a specific TP, demonstrating the progression from str
 ```
 /
 ├── TP1/        # Introduction to C programming
-├── TP2-3/      # Classes and dynamic memory allocation
-├── TP4-5/      # Composition and linked lists
+├── TP2_3/      # Classes and dynamic memory allocation
+├── TP4_5/      # Composition and linked lists
+├── TP6_7/      # Inheritance and polymorphism
+├── TP8         # Operator overloading
 ├── .gitignore  # To ignore certain file extensions on GitHub (e.g., .exe)
 └── README.md
 ```
